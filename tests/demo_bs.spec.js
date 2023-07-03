@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test')
   
 test('bstackdemo test1', async ({page}, testInfo) => {
     try {
-        await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.project.name}})}`);
+        //await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.project.name}})}`);
         await page.goto('https://bstackdemo.com/')
         //await expect(page).toHaveTitle('StackDemo')
         //await page.pause()
@@ -32,7 +32,7 @@ test('bstackdemo test1', async ({page}, testInfo) => {
 })
 
 test('bstackdemo test2', async ({page}, testInfo) => {
-    await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.project.name}})}`);
+    //await page.evaluate(_ => {},`browserstack_executor: ${JSON.stringify({action: "setSessionName", arguments: {name:testInfo.project.name}})}`);
     await page.goto('https://bstackdemo.com/')
     //await expect(page).toHaveTitle('StackDemo')
     //await page.pause()
