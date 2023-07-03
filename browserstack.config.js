@@ -12,7 +12,7 @@ const util = require('util');
 
 const caps = {
     name: 'aditya-bstack-demo',
-    build: BROWSERSTACK_BUILD_NAME,
+    build: process.env.BROWSERSTACK_BUILD_NAME,
     project: 'aditya-bstack-onboarding',
     "browserstack.debug" : "true",
     "browserstack.networkLogs" : "true",
