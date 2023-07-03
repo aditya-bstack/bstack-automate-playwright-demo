@@ -11,8 +11,8 @@ const util = require('util');
 
 
 const caps = {
-    name: process.env.BROWSERSTACK_BUILD_NAME,
-    build: process.env.BROWSERSTACK_BUILD_NAME,
+    name: 'aditya-bstack-demo',
+    build: 'playwright-test-3',
     project: 'aditya-bstack-onboarding',
     "browserstack.debug" : "true",
     "browserstack.networkLogs" : "true",
@@ -32,7 +32,7 @@ const patchCaps = (name, title) => {
     caps.browser_version = browser_version ? browser_version : 'latest';
     caps.os = os ? os : 'osx';
     caps.os_version = os_version ? os_version : 'catalina';
-    caps.name = process.env.BROWSERSTACK_BUILD_NAME;
+    caps.name = title;
   };
 
 exports.getCdpEndpoint = (name, title) => {
